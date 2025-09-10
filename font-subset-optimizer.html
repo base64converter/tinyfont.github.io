@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Fonts Subset Optimizer | Tinyfont</title>
+    <meta name="description" content="Optimize Google Fonts by generating custom subsets based on your text. Reduce file sizes and improve website performance.">
+    <meta name="keywords" content="google fonts subset, font optimizer, web font performance, font file size, subsetting tool">
+    <meta name="author" content="Prasoon">
+    <link rel="canonical" href="https://tinyfont.me/font-subset-optimizer.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tinyfont.me/font-subset-optimizer.html">
+    <meta property="og:title" content="Google Fonts Subset Optimizer | Tinyfont">
+    <meta property="og:description" content="Optimize Google Fonts by generating custom subsets based on your text. Reduce file sizes and improve website performance.">
+    <meta property="og:image" content="https://tinyfont.me/assets/images/og/subset-text-optimizer.png">
+    <meta property="og:image:alt" content="An icon representing font optimization or subsetting, for the Google Fonts Subset Optimizer tool.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tinyfont.me/font-subset-optimizer.html">
+    <meta property="twitter:title" content="Google Fonts Subset Optimizer | Tinyfont">
+    <meta property="twitter:description" content="Optimize Google Fonts by generating custom subsets based on your text. Reduce file sizes and improve website performance.">
+    <meta property="twitter:image" content="https://tinyfont.me/assets/images/og/subset-text-optimizer.png">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9534887202409405" crossorigin="anonymous"></script>
+    <!-- ANALYTICS_PLACEHOLDER -->
+</head>
+<body>
+    <header class="site-header"><div class="container">
+        <a href="./index.html" class="logo">TinyFont</a>
+        <nav class="main-nav" aria-label="Main Navigation"><ul><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Font Discovery</a><div class="dropdown-menu"><a href="./live-preview-tool.html">Live Google Font Previewer</a><a href="./font-comparison-tool.html">Compare Fonts Instantly</a><a href="./variable-font-finder.html">Discover Variable Google Fonts</a><a href="./language-support-finder.html">Find Fonts for Any Language</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Design & Typography</a><div class="dropdown-menu"><a href="./font-pairing-generator.html">Generate Beautiful Font Pairings</a><a href="./logo-fonts-tool.html">Find the Perfect Font for Your Logo</a><a href="./font-color-tester.html">Test Font Color Contrast</a><a href="./font-performance-checker.html">Analyze Font Performance Impact</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Performance & Web</a><div class="dropdown-menu"><a href="./google-fonts-css-generator.html">Generate Optimized Font CSS</a><a href="./css-font-stack-generator.html">Create Bulletproof CSS Font Stacks</a><a href="./web-safe-fonts-checker.html">Web Safe Font Reference</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Guides</a><div class="dropdown-menu"><a href="./font-accessibility-checker.html">Advanced Font Accessibility Checker</a><a href="./font-license-checker.html">Google Fonts License Checker</a><a href="./font-subset-optimizer.html">Google Fonts Subset Optimizer</a><a href="./subset-text-optimizer.html">Font Subsetting Text Generator</a></div></li></ul></nav>
+        <div class="header-controls">
+            <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+            <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
+        </div>
+    </div></header>
+    <main>
+        <header class="page-header"><div class="container">
+            <h1>Google Fonts Subset Optimizer</h1>
+            <p>Optimize Google Fonts by generating custom subsets based on your text.</p>
+        </div></header>
+        <div class="container">
+            <div class="content-section tool-container">
+                <h2>Generate Font Subset</h2>
+                <div class="tool-wrapper">
+                    <div class="control-group">
+                        <label for="fontSelector">1. Select a Font Family</label>
+                        <select id="fontSelector" class="tool-select" disabled><option>Loading fonts...</option></select>
+                    </div>
+                    <div class="control-group">
+                        <label for="sampleText">2. Enter Your Text for Subsetting</label>
+                        <textarea id="sampleText" class="tool-textarea" rows="8" placeholder="Paste the text content you will use on your website. The tool will extract unique characters for subsetting."></textarea>
+                    </div>
+                    <div class="control-group">
+                        <button id="generateSubsetBtn" class="tool-button" disabled>Generate Subset Characters</button>
+                    </div>
+                    <div id="subsetResults" class="subset-results" style="display: none;">
+                        <h3>Unique Characters for Subsetting:</h3>
+                        <textarea id="uniqueCharactersOutput" class="tool-textarea" rows="3" readonly></textarea>
+                        <button id="copyCharactersBtn" class="tool-button">Copy Characters</button>
+                        <h4>Instructions:</h4>
+                        <p>1. Copy the unique characters generated above.</p>
+                        <p>2. Go to <a href="https://google-webfonts-helper.herokuapp.com/fonts" target="_blank" rel="noopener noreferrer">Google Webfonts Helper</a> or a similar tool.</p>
+                        <p>3. Select your chosen font family.</p>
+                        <p>4. In the "Customize" section, paste the unique characters into the "Custom Subsets" field.</p>
+                        <p>5. Download the optimized font files and CSS.</p>
+                    </div>
+                    <div id="status" class="status-message" style="display: none;"></div>
+                </div>
+            </div>
+            <section id="how-to" class="content-section">
+                <h2>How to Use the Subset Optimizer</h2>
+                <p>1. **Select a Font:** Choose your desired font family from the dropdown list.<br>2. **Enter Your Text:** Paste the text content you will use on your website.<br>3. **Generate Characters:** Click the "Generate Subset Characters" button.<br>4. **Optimize:** Use the generated characters with a font subsetting tool to reduce font file sizes.</p>
+            </section>
+            <section id="faqs" class="content-section">
+                <h2>Frequently Asked Questions</h2>
+                <p><strong>Q: Why should I subset my fonts?</strong><br>A: Subsetting fonts drastically reduces their file size, leading to faster website loading times and improved performance, especially for users on slower connections.</p>
+                <p><strong>Q: Does this tool provide the actual font files?</strong><br>A: No, this tool generates the unique character string needed for subsetting. You will use this string with a dedicated font subsetting tool (like Google Webfonts Helper) to get the optimized font files.</p>
+                <p><strong>Q: Can I use this with any font?</strong><br>A: This tool is designed for Google Fonts. The generated character string can be used with any font subsetting tool that supports custom character ranges.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-column"><h4>Font Discovery</h4><ul><li><a href="./live-preview-tool.html">Live Google Font Previewer</a></li><li><a href="./font-comparison-tool.html">Compare Fonts Instantly</a></li><li><a href="./variable-font-finder.html">Discover Variable Google Fonts</a></li><li><a href="./language-support-finder.html">Find Fonts for Any Language</a></li></ul></div><div class="footer-column"><h4>Design & Typography</h4><ul><li><a href="./font-pairing-generator.html">Generate Beautiful Font Pairings</a></li><li><a href="./logo-fonts-tool.html">Find the Perfect Font for Your Logo</a></li><li><a href="./font-color-tester.html">Test Font Color Contrast</a></li><li><a href="./font-performance-checker.html">Analyze Font Performance Impact</a></li></ul></div><div class="footer-column"><h4>Performance & Web</h4><ul><li><a href="./google-fonts-css-generator.html">Generate Optimized Font CSS</a></li><li><a href="./css-font-stack-generator.html">Create Bulletproof CSS Font Stacks</a></li><li><a href="./web-safe-fonts-checker.html">Web Safe Font Reference</a></li></ul></div><div class="footer-column"><h4>Guides</h4><ul><li><a href="./font-accessibility-checker.html">Advanced Font Accessibility Checker</a></li><li><a href="./font-license-checker.html">Google Fonts License Checker</a></li><li><a href="./subset-text-optimizer.html">Font Subsetting Text Generator</a></li></ul></div></div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Prasoon. Built with ❤️ at TinyFont.me.</p>
+            <p>Last updated: August 21, 2025</p>
+        </div>
+    </div></footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const fontSelector = document.getElementById('fontSelector');
+        const sampleText = document.getElementById('sampleText');
+        const generateSubsetBtn = document.getElementById('generateSubsetBtn');
+        const subsetResults = document.getElementById('subsetResults');
+        const uniqueCharactersOutput = document.getElementById('uniqueCharactersOutput');
+        const copyCharactersBtn = document.getElementById('copyCharactersBtn');
+        const statusDiv = document.getElementById('status');
+        let allFonts = [];
+
+        async function fetchFonts() {
+            try {
+                const response = await fetch('/get-fonts');
+                if (!response.ok) throw new Error('Failed to load font list.');
+                const data = await response.json();
+                allFonts = data.items; // Assuming 'items' contains the font list
+                fontSelector.innerHTML = allFonts.map(f => `<option value="${f.family}">${f.family}</option>`).join('');
+                fontSelector.disabled = false;
+                generateSubsetBtn.disabled = false;
+            } catch (error) {
+                fontSelector.innerHTML = '<option>Error loading fonts.</option>';
+                statusDiv.textContent = 'Could not load font list. Please try again later.';
+                statusDiv.style.display = 'block';
+                console.error('Error fetching fonts:', error);
+            }
+        }
+
+        function generateUniqueCharacters() {
+            const text = sampleText.value;
+            if (!text) {
+                uniqueCharactersOutput.value = '';
+                subsetResults.style.display = 'none';
+                statusDiv.textContent = 'Please enter some text to generate unique characters.';
+                statusDiv.style.display = 'block';
+                return;
+            }
+
+            const uniqueChars = [...new Set(text)].sort().join('');
+            uniqueCharactersOutput.value = uniqueChars;
+            subsetResults.style.display = 'block';
+            statusDiv.style.display = 'none';
+        }
+
+        copyCharactersBtn.addEventListener('click', () => {
+            uniqueCharactersOutput.select();
+            document.execCommand('copy');
+            statusDiv.textContent = 'Characters copied to clipboard!';
+            statusDiv.style.display = 'block';
+        });
+
+        generateSubsetBtn.addEventListener('click', generateUniqueCharacters);
+        sampleText.addEventListener('input', () => {
+            // Clear results when text changes
+            subsetResults.style.display = 'none';
+            statusDiv.style.display = 'none';
+        });
+
+        fetchFonts();
+    </script>
+</body>
+</html>

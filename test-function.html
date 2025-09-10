@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Function</title>
+</head>
+<body>
+  <h1>Test Function</h1>
+  <pre id="output"></pre>
+  <script>
+    fetch('/get-fonts?url=https://www.googleapis.com/webfonts/v1/webfonts?sort=alpha')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('output').textContent = data;
+      })
+      .catch(error => {
+        document.getElementById('output').textContent = 'Error: ' + error;
+      });
+  </script>
+</body>
+</html>

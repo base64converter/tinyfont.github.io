@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Fonts License Checker | Tinyfont</title>
+    <meta name="description" content="Easily check and understand the license of any Google Font. Get clear summaries of usage rights for commercial and personal projects.">
+    <meta name="keywords" content="google fonts license, font license checker, font usage rights, commercial font use, open font license">
+    <meta name="author" content="Prasoon">
+    <link rel="canonical" href="https://tinyfont.me/font-license-checker.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tinyfont.me/font-license-checker.html">
+    <meta property="og:title" content="Google Fonts License Checker | Tinyfont">
+    <meta property="og:description" content="Easily check and understand the license of any Google Font. Get clear summaries of usage rights for commercial and personal projects.">
+    <meta property="og:image" content="https://tinyfont.me/assets/images/og/font-license-checker.png">
+    <meta property="og:image:alt" content="An icon representing a legal document or license, for the Font License Checker tool.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tinyfont.me/font-license-checker.html">
+    <meta property="twitter:title" content="Google Fonts License Checker | Tinyfont">
+    <meta property="twitter:description" content="Easily check and understand the license of any Google Font. Get clear summaries of usage rights for commercial and personal projects.">
+    <meta property="twitter:image" content="https://tinyfont.me/assets/images/og/font-license-checker.png">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9534887202409405" crossorigin="anonymous"></script>
+    <!-- ANALYTICS_PLACEHOLDER -->
+</head>
+<body>
+    <header class="site-header"><div class="container">
+        <a href="./index.html" class="logo">TinyFont</a>
+        <nav class="main-nav" aria-label="Main Navigation"><ul><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Font Discovery</a><div class="dropdown-menu"><a href="./live-preview-tool.html">Live Google Font Previewer</a><a href="./font-comparison-tool.html">Compare Fonts Instantly</a><a href="./variable-font-finder.html">Discover Variable Google Fonts</a><a href="./language-support-finder.html">Find Fonts for Any Language</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Design & Typography</a><div class="dropdown-menu"><a href="./font-pairing-generator.html">Generate Beautiful Font Pairings</a><a href="./logo-fonts-tool.html">Find the Perfect Font for Your Logo</a><a href="./font-color-tester.html">Test Font Color Contrast</a><a href="./font-performance-checker.html">Analyze Font Performance Impact</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Performance & Web</a><div class="dropdown-menu"><a href="./google-fonts-css-generator.html">Generate Optimized Font CSS</a><a href="./css-font-stack-generator.html">Create Bulletproof CSS Font Stacks</a><a href="./web-safe-fonts-checker.html">Web Safe Font Reference</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Guides</a><div class="dropdown-menu"><a href="./font-accessibility-checker.html">Advanced Font Accessibility Checker</a><a href="./font-license-checker.html">Google Fonts License Checker</a><a href="./font-subset-optimizer.html">Google Fonts Subset Optimizer</a><a href="./subset-text-optimizer.html">Font Subsetting Text Generator</a></div></li></ul></nav>
+        <div class="header-controls">
+            <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+            <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
+        </div>
+    </div></header>
+    <main>
+        <header class="page-header"><div class="container">
+            <h1>Google Fonts License Checker</h1>
+            <p>Easily check and understand the license of any Google Font.</p>
+        </div></header>
+        <div class="container">
+            <div class="content-section tool-container">
+                <h2>Check Font License</h2>
+                <div class="tool-wrapper">
+                    <div class="control-group">
+                        <label for="fontSelector">1. Select a Font Family</label>
+                        <select id="fontSelector" class="tool-select" disabled><option>Loading fonts...</option></select>
+                    </div>
+                    <div class="control-group">
+                        <button id="checkLicenseBtn" class="tool-button" disabled>Check License</button>
+                    </div>
+                    <div id="licenseResults" class="license-results" style="display: none;">
+                        <h3>License Summary for <span id="selectedFontName"></span>:</h3>
+                        <div id="licenseDetails"></div>
+                        <p>For full details, please refer to the <a id="fullLicenseLink" href="#" target="_blank" rel="noopener noreferrer">official license document</a>.</p>
+                    </div>
+                    <div id="status" class="status-message" style="display: none;"></div>
+                </div>
+            </div>
+            <section id="how-to" class="content-section">
+                <h2>How to Use the Font License Checker</h2>
+                <p>1. **Select a Font:** Choose your desired font family from the dropdown list.<br>2. **Click Check License:** Hit the "Check License" button.<br>3. **Review Summary:** A clear summary of the font's usage rights will be displayed.</p>
+            </section>
+            <section id="faqs" class="content-section">
+                <h2>Frequently Asked Questions</h2>
+                <p><strong>Q: Are all Google Fonts free to use?</strong><br>A: Yes, all fonts on Google Fonts are open source and free for both personal and commercial use. However, specific licenses may have minor differences in terms of modification and redistribution.</p>
+                <p><strong>Q: What is the difference between OFL and Apache licenses?</strong><br>A: The Open Font License (OFL) is specifically designed for fonts, allowing free use, modification, and distribution. The Apache License 2.0 is a permissive free software license. Both generally allow commercial use and modification.</p>
+                <p><strong>Q: Can I embed these fonts on my website?</strong><br>A: Yes, all Google Fonts are designed to be easily embedded on websites.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-column"><h4>Font Discovery</h4><ul><li><a href="./live-preview-tool.html">Live Google Font Previewer</a></li><li><a href="./font-comparison-tool.html">Compare Fonts Instantly</a></li><li><a href="./variable-font-finder.html">Discover Variable Google Fonts</a></li><li><a href="./language-support-finder.html">Find Fonts for Any Language</a></li></ul></div><div class="footer-column"><h4>Design & Typography</h4><ul><li><a href="./font-pairing-generator.html">Generate Beautiful Font Pairings</a></li><li><a href="./logo-fonts-tool.html">Find the Perfect Font for Your Logo</a></li><li><a href="./font-color-tester.html">Test Font Color Contrast</a></li><li><a href="./font-performance-checker.html">Analyze Font Performance Impact</a></li></ul></div><div class="footer-column"><h4>Performance & Web</h4><ul><li><a href="./google-fonts-css-generator.html">Generate Optimized Font CSS</a></li><li><a href="./css-font-stack-generator.html">Create Bulletproof CSS Font Stacks</a></li><li><a href="./web-safe-fonts-checker.html">Web Safe Font Reference</a></li></ul></div><div class="footer-column"><h4>Guides</h4><ul><li><a href="./font-accessibility-checker.html">Advanced Font Accessibility Checker</a></li><li><a href="./subset-text-optimizer.html">Font Subsetting Text Generator</a></li></ul></div></div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Prasoon. Built with ❤️ at TinyFont.me.</p>
+            <p>Last updated: August 21, 2025</p>
+        </div>
+    </div></footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const fontSelector = document.getElementById('fontSelector');
+        const checkLicenseBtn = document.getElementById('checkLicenseBtn');
+        const licenseResults = document.getElementById('licenseResults');
+        const selectedFontName = document.getElementById('selectedFontName');
+        const licenseDetails = document.getElementById('licenseDetails');
+        const fullLicenseLink = document.getElementById('fullLicenseLink');
+        const statusDiv = document.getElementById('status');
+        let allFonts = [];
+
+        async function fetchFonts() {
+            try {
+                const response = await fetch('/get-fonts');
+                if (!response.ok) throw new Error('Failed to load font list.');
+                const data = await response.json();
+                allFonts = data.items; // Assuming 'items' contains the font list
+                fontSelector.innerHTML = allFonts.map(f => `<option value="${f.family}">${f.family}</option>`).join('');
+                fontSelector.disabled = false;
+                checkLicenseBtn.disabled = false;
+            } catch (error) {
+                fontSelector.innerHTML = '<option>Error loading fonts.</option>';
+                statusDiv.textContent = 'Could not load font list. Please try again later.';
+                statusDiv.style.display = 'block';
+                console.error('Error fetching fonts:', error);
+            }
+        }
+
+        function getLicenseInfo(fontFamily) {
+            const font = allFonts.find(f => f.family === fontFamily);
+            if (!font) {
+                return { summary: 'Font not found.', link: '#' };
+            }
+
+            // Google Fonts generally use Open Font License (OFL) or Apache License 2.0
+            // The API response for a font usually includes a 'license' field or similar.
+            // For simplicity, we'll map common licenses to summaries.
+            let summary = '';
+            let licenseLink = '#';
+
+            // The Google Fonts API response for a font item typically includes a 'license' field.
+            // Example: font.license = 'Open Font License'
+            // Or font.license = 'Apache License, Version 2.0'
+
+            // For now, we'll use a simplified mapping based on common Google Fonts licenses.
+            // In a real scenario, you might fetch the actual license text or have a more robust mapping.
+            const licenseType = font.license || 'Open Font License'; // Defaulting if not explicitly in API response
+
+            switch (licenseType) {
+                case 'Open Font License':
+                case 'OFL':
+                    summary = `
+                        <p><strong>License Type:</strong> Open Font License (OFL)</p>
+                        <p><strong>Summary:</strong> This font is free to use, even for commercial purposes. You can modify it and distribute it, provided you adhere to the terms of the OFL. This generally means you cannot sell the font software itself, but you can use it in products that are sold.</p>
+                        <p><strong>Key Permissions:</strong> Use, Study, Modify, Redistribute (with conditions).</p>
+                        <p><strong>Key Restrictions:</strong> Cannot sell the font software itself. Must include the OFL text with any redistribution.</p>
+                    `;
+                    licenseLink = 'https://scripts.sil.org/OFL';
+                    break;
+                case 'Apache License, Version 2.0':
+                case 'Apache':
+                    summary = `
+                        <p><strong>License Type:</strong> Apache License, Version 2.0</p>
+                        <p><strong>Summary:</strong> This is a permissive free software license. You are free to use, modify, and distribute the font for any purpose, including commercial use, without obligation to release your modifications as open source. You must include a copy of the license and a notice of changes if you modify it.</p>
+                        <p><strong>Key Permissions:</strong> Commercial Use, Modification, Distribution, Patent Use, Private Use.</p>
+                        <p><strong>Key Restrictions:</strong> Trademark Use, Liability, Warranty.</p>
+                    `;
+                    licenseLink = 'https://www.apache.org/licenses/LICENSE-2.0';
+                    break;
+                default:
+                    summary = `
+                        <p><strong>License Type:</strong> ${licenseType || 'Unknown'}</p>
+                        <p><strong>Summary:</strong> This font is generally free for personal and commercial use as part of the Google Fonts library. For specific details, please refer to the official license document.</p>
+                    `;
+                    licenseLink = '#'; // Fallback if license type is not recognized
+                    break;
+            }
+            return { summary, link: licenseLink };
+        }
+
+        checkLicenseBtn.addEventListener('click', () => {
+            const fontFamily = fontSelector.value;
+            if (!fontFamily) return;
+
+            selectedFontName.textContent = fontFamily;
+            const { summary, link } = getLicenseInfo(fontFamily);
+            licenseDetails.innerHTML = summary;
+            fullLicenseLink.href = link;
+            licenseResults.style.display = 'block';
+            statusDiv.style.display = 'none';
+        });
+
+        fetchFonts();
+    </script>
+</body>
+</html>

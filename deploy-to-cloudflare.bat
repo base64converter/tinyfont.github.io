@@ -1,0 +1,1 @@
+wrangler pages deploy . --project-name tinyfont-me --branch main

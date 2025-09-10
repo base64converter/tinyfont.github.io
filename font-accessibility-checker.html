@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Accessibility Checker | Tinyfont</title>
+    <meta name="description" content="Analyze Google Fonts for accessibility compliance (WCAG) including readability, legibility, and contrast.">
+    <meta name="keywords" content="font accessibility, WCAG, font checker, readability, legibility, contrast, Google Fonts">
+    <meta name="author" content="Prasoon">
+    <link rel="canonical" href="https://tinyfont.me/font-accessibility-checker.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tinyfont.me/font-accessibility-checker.html">
+    <meta property="og:title" content="Font Accessibility Checker | Tinyfont">
+    <meta property="og:description" content="Analyze Google Fonts for accessibility compliance (WCAG) including readability, legibility, and contrast.">
+    <meta property="og:image" content="https://tinyfont.me/assets/images/og/accessibility-checker.png">
+    <meta property="og:image:alt" content="An icon representing accessibility, for the Font Accessibility Checker tool.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tinyfont.me/font-accessibility-checker.html">
+    <meta property="twitter:title" content="Font Accessibility Checker | Tinyfont">
+    <meta property="twitter:description" content="Analyze Google Fonts for accessibility compliance (WCAG) including readability, legibility, and contrast.">
+    <meta property="twitter:image" content="https://tinyfont.me/assets/images/og/accessibility-checker.png">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9534887202409405" crossorigin="anonymous"></script>
+    <!-- ANALYTICS_PLACEHOLDER -->
+</head>
+<body>
+    <header class="site-header"><div class="container">
+        <a href="./index.html" class="logo">TinyFont</a>
+        <nav class="main-nav" aria-label="Main Navigation"><ul><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Font Discovery</a><div class="dropdown-menu"><a href="./live-preview-tool.html">Live Google Font Previewer</a><a href="./font-comparison-tool.html">Compare Fonts Instantly</a><a href="./variable-font-finder.html">Discover Variable Google Fonts</a><a href="./language-support-finder.html">Find Fonts for Any Language</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Design & Typography</a><div class="dropdown-menu"><a href="./font-pairing-generator.html">Generate Beautiful Font Pairings</a><a href="./logo-fonts-tool.html">Find the Perfect Font for Your Logo</a><a href="./font-color-tester.html">Test Font Color Contrast</a><a href="./font-performance-checker.html">Analyze Font Performance Impact</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Performance & Web</a><div class="dropdown-menu"><a href="./google-fonts-css-generator.html">Generate Optimized Font CSS</a><a href="./css-font-stack-generator.html">Create Bulletproof CSS Font Stacks</a><a href="./web-safe-fonts-checker.html">Web Safe Font Reference</a></div></li><li class="nav-item"><a href="#" class="nav-link" aria-haspopup="true">Guides</a><div class="dropdown-menu"><a href="./font-accessibility-checker.html">Advanced Font Accessibility Checker</a><a href="./font-license-checker.html">Google Fonts License Checker</a><a href="./font-subset-optimizer.html">Google Fonts Subset Optimizer</a><a href="./subset-text-optimizer.html">Font Subsetting Text Generator</a></div></li></ul></nav>
+        <div class="header-controls">
+            <button class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+            <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
+        </div>
+    </div></header>
+    <main>
+        <header class="page-header"><div class="container">
+            <h1>Font Accessibility Checker</h1>
+            <p>Analyze Google Fonts for accessibility compliance (WCAG) including readability, legibility, and contrast.</p>
+        </div></header>
+        <div class="container">
+            <div class="content-section tool-container">
+                <h2>Analyze Font Accessibility</h2>
+                <div class="tool-wrapper">
+                    <div class="control-group">
+                        <label for="fontSelector">1. Select a Font Family</label>
+                        <select id="fontSelector" class="tool-select" disabled><option>Loading fonts...</option></select>
+                    </div>
+                    <div class="control-group">
+                        <label for="sampleText">2. Enter Sample Text</label>
+                        <textarea id="sampleText" class="tool-textarea" rows="5" placeholder="Type your sample text here for analysis..."></textarea>
+                    </div>
+                    <div class="control-group">
+                        <button id="analyzeBtn" class="tool-button" disabled>Analyze Accessibility</button>
+                    </div>
+                    <div id="analysisResults" class="analysis-results" style="display: none;">
+                        <h3>Analysis Results:</h3>
+                        <div id="previewArea" style="font-size: 16px; line-height: 1.5; margin-bottom: 20px; border: 1px solid #eee; padding: 10px;"></div>
+                        <p><strong>Font Size Recommendation:</strong> <span id="fontSizeResult"></span></p>
+                        <p><strong>Line Height Recommendation:</strong> <span id="lineHeightResult"></span></p>
+                        <p><strong>Letter Spacing Recommendation:</strong> <span id="letterSpacingResult"></span></p>
+                        <p><strong>Contrast Ratio:</strong> <span id="contrastResult"></span> (Requires color input - link to <a href="./font-color-tester.html">Font Color Tester</a>)</p>
+                        <div id="legibilityNotes"></div>
+                    </div>
+                    <div id="status" class="status-message" style="display: none;"></div>
+                </div>
+            </div>
+            <section id="how-to" class="content-section">
+                <h2>How to Use the Font Accessibility Checker</h2>
+                <p>1. **Select a Font:** Choose your desired font family from the dropdown list.<br>2. **Enter Sample Text:** Type or paste text into the sample text area.<br>3. **Click Analyze:** Hit the "Analyze Accessibility" button to get recommendations.</p>
+            </section>
+            <section id="faqs" class="content-section">
+                <h2>Frequently Asked Questions</h2>
+                <p><strong>Q: What accessibility standards are used?</strong><br>A: This tool primarily uses guidelines from WCAG (Web Content Accessibility Guidelines) 2.1 and 2.2 for font-related recommendations.</p>
+                <p><strong>Q: Does this check color contrast?</strong><br>A: Basic contrast notes are provided, but for a comprehensive color contrast check, please use our <a href="./font-color-tester.html">Font Color Tester</a> tool.</p>
+                <p><strong>Q: Can I simulate visual impairments?</strong><br>A: Advanced simulation features are planned for future updates.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-column"><h4>Font Discovery</h4><ul><li><a href="./live-preview-tool.html">Live Google Font Previewer</a></li><li><a href="./font-comparison-tool.html">Compare Fonts Instantly</a></li><li><a href="./variable-font-finder.html">Discover Variable Google Fonts</a></li><li><a href="./language-support-finder.html">Find Fonts for Any Language</a></li></ul></div><div class="footer-column"><h4>Design & Typography</h4><ul><li><a href="./font-pairing-generator.html">Generate Beautiful Font Pairings</a></li><li><a href="./logo-fonts-tool.html">Find the Perfect Font for Your Logo</a></li><li><a href="./font-color-tester.html">Test Font Color Contrast</a></li><li><a href="./font-performance-checker.html">Analyze Font Performance Impact</a></li></ul></div><div class="footer-column"><h4>Performance & Web</h4><ul><li><a href="./google-fonts-css-generator.html">Generate Optimized Font CSS</a></li><li><a href="./css-font-stack-generator.html">Create Bulletproof CSS Font Stacks</a></li><li><a href="./web-safe-fonts-checker.html">Web Safe Font Reference</a></li></ul></div><div class="footer-column"><h4>Guides</h4><ul><li><a href="./accessibility-checker.html">Check Font Accessibility</a></li><li><a href="./subset-text-optimizer.html">Font Subsetting Text Generator</a></li></ul></div></div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Prasoon. Built with ❤️ at TinyFont.me.</p>
+            <p>Last updated: August 21, 2025</p>
+        </div>
+    </div></footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const fontSelector = document.getElementById('fontSelector');
+        const sampleText = document.getElementById('sampleText');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const analysisResults = document.getElementById('analysisResults');
+        const previewArea = document.getElementById('previewArea');
+        const fontSizeResult = document.getElementById('fontSizeResult');
+        const lineHeightResult = document.getElementById('lineHeightResult');
+        const letterSpacingResult = document.getElementById('letterSpacingResult');
+        const contrastResult = document.getElementById('contrastResult');
+        const legibilityNotes = document.getElementById('legibilityNotes');
+        const statusDiv = document.getElementById('status');
+        let allFonts = [];
+
+        // Function to load Google Fonts dynamically
+        function loadGoogleFont(fontFamily) {
+            const link = document.createElement('link');
+            link.href = `https://fonts.googleapis.com/css2?family=${fontFamily.replace(/ /g, '+')}&display=swap`;
+            link.rel = 'stylesheet';
+            document.head.appendChild(link);
+        }
+
+        async function fetchFonts() {
+            try {
+                const response = await fetch('/get-fonts');
+                if (!response.ok) throw new Error('Failed to load font list.');
+                const data = await response.json();
+                allFonts = data.items; // Assuming 'items' contains the font list
+                fontSelector.innerHTML = allFonts.map(f => `<option value="${f.family}">${f.family}</option>`).join('');
+                fontSelector.disabled = false;
+                analyzeBtn.disabled = false;
+            } catch (error) {
+                fontSelector.innerHTML = '<option>Error loading fonts.</option>';
+                statusDiv.textContent = 'Could not load font list. Please try again later.';
+                statusDiv.style.display = 'block';
+                console.error('Error fetching fonts:', error);
+            }
+        }
+
+        function analyzeFont() {
+            const selectedFontFamily = fontSelector.value;
+            const text = sampleText.value || 'The quick brown fox jumps over the lazy dog.'; // Default text
+
+            if (!selectedFontFamily) {
+                statusDiv.textContent = 'Please select a font family.';
+                statusDiv.style.display = 'block';
+                return;
+            }
+
+            statusDiv.style.display = 'none';
+            analysisResults.style.display = 'block';
+
+            // Load the selected font
+            loadGoogleFont(selectedFontFamily);
+            previewArea.style.fontFamily = `'${selectedFontFamily}', sans-serif`;
+            previewArea.textContent = text;
+
+            // --- Basic Accessibility Analysis (WCAG 2.1/2.2) ---
+
+            // 1. Font Size Recommendation (WCAG 2.1 Success Criterion 1.4.4 Resize text)
+            // General recommendation for body text is 16px or 1em as a base.
+            // Users should be able to resize text up to 200% without loss of content or functionality.
+            const currentFontSize = parseFloat(window.getComputedStyle(previewArea).fontSize);
+            if (currentFontSize < 16) {
+                fontSizeResult.textContent = `Current: ${currentFontSize}px. Recommendation: Consider a base font size of at least 16px for body text for better readability.`;
+                fontSizeResult.style.color = 'orange';
+            } else {
+                fontSizeResult.textContent = `Current: ${currentFontSize}px. Looks good for a base font size.`;
+                fontSizeResult.style.color = 'green';
+            }
+
+            // 2. Line Height Recommendation (WCAG 2.1 Success Criterion 1.4.8 Visual Presentation)
+            // Recommended line height (line-spacing) is at least 1.5 times the font size for body text.
+            const currentLineHeight = parseFloat(window.getComputedStyle(previewArea).lineHeight);
+            const recommendedLineHeight = currentFontSize * 1.5;
+            if (currentLineHeight < recommendedLineHeight) {
+                lineHeightResult.textContent = `Current: ${currentLineHeight}px. Recommendation: Increase line height to at least ${recommendedLineHeight.toFixed(1)}px (1.5 times font size) for improved readability.`;
+                lineHeightResult.style.color = 'orange';
+            } else {
+                lineHeightResult.textContent = `Current: ${currentLineHeight}px. Looks good for line height.`;
+                lineHeightResult.style.color = 'green';
+            }
+
+            // 3. Letter Spacing Recommendation (WCAG 2.2 Success Criterion 1.4.12 Text Spacing)
+            // Letter spacing should be adjustable to at least 0.12 times the font size.
+            // This check is more about default spacing.
+            const currentLetterSpacing = parseFloat(window.getComputedStyle(previewArea).letterSpacing);
+            const recommendedMinLetterSpacing = currentFontSize * 0.12; // This is for *adjustable* spacing, not default.
+            // For default, we're looking for extremes.
+            if (currentLetterSpacing < -1 || currentLetterSpacing > 2) { // Arbitrary range for very tight/loose
+                letterSpacingResult.textContent = `Current: ${currentLetterSpacing}px. Recommendation: Be mindful of extreme letter spacing. Ensure it's not too tight or too loose for readability.`;
+                letterSpacingResult.style.color = 'orange';
+            } else {
+                letterSpacingResult.textContent = `Current: ${currentLetterSpacing}px. Looks reasonable for letter spacing.`;
+                letterSpacingResult.style.color = 'green';
+            }
+
+            // 4. Contrast Ratio (Link to existing tool)
+            contrastResult.innerHTML = `Please use our dedicated <a href="./font-color-tester.html">Font Color Tester</a> tool for a comprehensive contrast ratio analysis.`;
+
+            // 5. Legibility Notes (General guidance)
+            legibilityNotes.innerHTML = `<h4>General Legibility Notes:</h4>
+                <ul>
+                    <li>Avoid overly decorative or thin fonts for body text.</li>
+                    <li>Ensure sufficient stroke contrast within characters.</li>
+                    <li>Consider the x-height of the font; fonts with larger x-heights are generally more legible at smaller sizes.</li>
+                </ul>`;
+        }
+
+        fontSelector.addEventListener('change', analyzeFont);
+        sampleText.addEventListener('input', analyzeFont);
+        analyzeBtn.addEventListener('click', analyzeFont);
+
+        fetchFonts();
+    </script>
+</body>
+</html>
